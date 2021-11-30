@@ -1,3 +1,4 @@
+e
 const express = require("express");
 
 const { validation, ctrlWrapper } = require("../../middlewares");
@@ -11,6 +12,7 @@ router.get("/", ctrlWrapper(ctrl.getAll));
 router.get("/:contactId", ctrlWrapper(ctrl.getById));
 
 router.post("/", validation(joiSchema), ctrlWrapper(ctrl.add));
+
 
 router.delete("/:contactId", ctrlWrapper(ctrl.removeById));
 
