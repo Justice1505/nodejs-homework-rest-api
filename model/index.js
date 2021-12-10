@@ -1,3 +1,6 @@
+
+const {Contact} = require("./contact")
+
 const crypto = require('crypto')
 const DB = require('./db')
 const db = new DB('contacts.json')
@@ -48,10 +51,7 @@ const updateContact = async (contactId, body) => {
   return null
 }
 
+
 module.exports = {
-  listContacts,
-  getContactById,
-  removeContact,
-  addContact,
-  updateContact,
+    Contact
 }
